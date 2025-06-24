@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>जय जगन्नाथ रथ यात्रा 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Blinking Lights -->
+  <div class="blinking-bar blinking-top"></div>
+  <div class="blinking-bar blinking-bottom"></div>
+
+  <!-- Background + Main Content -->
+  <div class="container">
+    <img src="jagannath_bg.jpg" alt="Jagannath Yatra" class="bg" />
+    <div class="content">
+      <h1>🚩 जय जगन्नाथ 🚩</h1>
+      <h2>🌼 रथ यात्रा 2025 की हार्दिक शुभकामनाएं 🌼</h2>
+      <p style="font-size:18px; color:#ffeecc; margin: 10px 20px;">
+        आपके जीवन में भी श्री जगन्नाथ जी की कृपा ऐसे ही रथ की तरह आगे बढ़े।  
+        सुख, शांति और समृद्धि आपके जीवन में बनी रहे।
+      </p>
+      <h3 id="wisher">💌 सप्रेम संदेश: <span id="name">आपका नाम</span></h3>
+
+      <input type="text" id="inputName" placeholder="अपना नाम लिखें" />
+      
+      <!-- Share Buttons -->
+      <div class="share-buttons">
+        <button onclick="updateName()">नाम बदलें और शेयर करें 🚀</button>
+        <button onclick="shareWhatsApp()">📩 WhatsApp</button>
+        <button onclick="shareTelegram()">📨 Telegram</button>
+        <button onclick="copyLink()">🔗 लिंक कॉपी करें</button>
+        <button onclick="shareFacebook()">📘 Facebook</button>
+      </div>
+      <div class="countdown">
+      ⏳ रथ यात्रा आरंभ होने में बाकी समय:
+      <h3 id="timer">Loading...</h3>
+      </div>
+
+    </div>
+
+    <footer>Made with ❤️ by @DevByHans</footer>
+  </div>
+
+  <!-- Phool Bars -->
+  <div class="flower-container"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

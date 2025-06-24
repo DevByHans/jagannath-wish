@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.content {
+  padding-top: 60px;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+  animation: glow 2s ease-in-out infinite, fadeIn 1s ease forwards;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #ffffff;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #ffeeee;
+  animation: fadeIn 2s ease forwards;
+}
+
+p {
+  animation: fadeIn 2s ease forwards;
+}
+
+input {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 70%;
+  max-width: 300px;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff9900;
+  color: white;
+  cursor: pointer;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+button:hover {
+  background-color: #cc7a00;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #ddd;
+  animation: fadeIn 3s ease forwards;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Glow & Fade Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px gold; }
+  50% { text-shadow: 0 0 20px orange; }
+}
+
+/* Blinking Lights */
+.blinking-bar {
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ffd700,
+    #ffd700 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  animation: blinkBar 1s linear infinite;
+  z-index: 3;
+}
+
+.blinking-top {
+  top: 0;
+}
+
+.blinking-bottom {
+  bottom: 0;
+}
+
+@keyframes blinkBar {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Flower Fall */
+.flower-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.flower {
+  position: absolute;
+  top: -50px;
+  color: #ff69b4;
+  font-size: 24px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.countdown {
+  font-size: 18px;
+  color: #ffeb99;
+  margin-top: 15px;
+  animation: fadeIn 2s ease forwards;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-top: 5px;
+}
